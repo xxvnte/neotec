@@ -1,31 +1,27 @@
-import { ArrowRight, Sparkles } from 'lucide-react';
-import { ThreeBlobScene } from './ThreeBlobScene';
+import { ArrowRight, Sparkles } from "lucide-react";
+import { ThreeBlobScene } from "./ThreeBlobScene";
 
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background overlay */}
       <div className="absolute inset-0 bg-black" />
-      
+
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
           <div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-950/50 border border-violet-500/30 rounded-full mb-8">
-              <Sparkles className="w-4 h-4 text-violet-400" />
-              <span className="text-sm text-violet-300">Innovación en desarrollo de software</span>
-            </div>
-            
-            <h1 className="text-5xl md:text-7xl mb-6 bg-gradient-to-r from-violet-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent">
-              Transformamos Ideas en Código
+            <h1 className="text-4xl md:text-7xl mb-6 py-4 bg-linear-to-r from-violet-500 via-purple-300 to-indigo-500 bg-clip-text text-transparent">
+              Transformamos ideas en realidad
             </h1>
-            
+
             <p className="text-xl text-gray-400 mb-10">
-              Creamos soluciones de software innovadoras que impulsan el futuro de tu negocio con tecnología de vanguardia
+              Creamos soluciones de software innovadoras que impulsan el futuro
+              de tu negocio con tecnología
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <button className="group px-8 py-4 bg-gradient-to-r from-violet-600 to-purple-600 rounded-lg hover:shadow-2xl hover:shadow-violet-500/50 transition-all flex items-center justify-center gap-2">
+              <button className="group px-8 py-4 bg-linear-to-r from-violet-600 to-purple-600 rounded-lg hover:shadow-2xl hover:shadow-violet-500/50 transition-all flex items-center justify-center gap-2">
                 <span>Iniciar Proyecto</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
@@ -33,33 +29,11 @@ export function Hero() {
                 Ver Portfolio
               </button>
             </div>
-            
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-violet-500/30">
-              <div>
-                <div className="text-3xl bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">
-                  100+
-                </div>
-                <div className="text-gray-400 mt-1">Proyectos</div>
-              </div>
-              <div>
-                <div className="text-3xl bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">
-                  50+
-                </div>
-                <div className="text-gray-400 mt-1">Clientes</div>
-              </div>
-              <div>
-                <div className="text-3xl bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">
-                  5+
-                </div>
-                <div className="text-gray-400 mt-1">Años</div>
-              </div>
-            </div>
           </div>
-          
+
           {/* Right - 3D Blob Scene */}
           <div className="relative">
-            <div className="aspect-square bg-gradient-to-br from-purple-950/30 to-black border border-violet-500/30 rounded-2xl overflow-hidden backdrop-blur-sm">
+            <div className="h-96">
               <ThreeBlobScene />
             </div>
           </div>

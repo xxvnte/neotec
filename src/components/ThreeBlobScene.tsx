@@ -1,5 +1,5 @@
-import { useEffect, useRef } from 'react';
-import * as THREE from 'three';
+import { useEffect, useRef } from "react";
+import * as THREE from "three";
 
 export function ThreeBlobScene() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -25,7 +25,7 @@ export function ThreeBlobScene() {
 
     // Create blob geometry
     const blobGeometry = new THREE.IcosahedronGeometry(2, 64);
-    
+
     // Store original positions
     const originalPositions = blobGeometry.attributes.position.array.slice();
 
@@ -90,7 +90,7 @@ export function ThreeBlobScene() {
 
       // Deform the blob
       const positions = blobGeometry.attributes.position.array;
-      
+
       for (let i = 0; i < positions.length; i += 3) {
         const x = originalPositions[i];
         const y = originalPositions[i + 1];
@@ -102,7 +102,7 @@ export function ThreeBlobScene() {
           y * 0.5 + elapsedTime * 0.2,
           z * 0.5
         );
-        
+
         const noiseValue2 = noise(
           x * 0.3 + elapsedTime * 0.1,
           y * 0.3,
@@ -114,7 +114,7 @@ export function ThreeBlobScene() {
         // Apply deformation
         const length = Math.sqrt(x * x + y * y + z * z);
         const factor = 1 + distortion;
-        
+
         positions[i] = (x / length) * factor * 2;
         positions[i + 1] = (y / length) * factor * 2;
         positions[i + 2] = (z / length) * factor * 2;
@@ -124,8 +124,8 @@ export function ThreeBlobScene() {
       blobGeometry.computeVertexNormals();
 
       // Slow rotation
-      blob.rotation.x = elapsedTime * 0.1;
-      blob.rotation.y = elapsedTime * 0.15;
+      blob.rotation.x = elapsedTime * 0.2;
+      blob.rotation.y = elapsedTime * 0.25;
 
       renderer.render(scene, camera);
       animationId = requestAnimationFrame(animate);
@@ -138,17 +138,17 @@ export function ThreeBlobScene() {
       if (!containerRef.current) return;
       const newWidth = containerRef.current.clientWidth;
       const newHeight = containerRef.current.clientHeight;
-      
+
       camera.aspect = newWidth / newHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(newWidth, newHeight);
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     // Cleanup
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
       cancelAnimationFrame(animationId);
       if (containerRef.current) {
         containerRef.current.removeChild(renderer.domElement);
