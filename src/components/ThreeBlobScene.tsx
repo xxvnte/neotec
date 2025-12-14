@@ -74,6 +74,7 @@ export function ThreeBlobScene() {
     });
 
     const blob = new THREE.Mesh(blobGeometry, shaderMaterial);
+    blob.scale.set(1, 1, 1);
     scene.add(blob);
 
     // Simple noise function

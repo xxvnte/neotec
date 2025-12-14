@@ -11,11 +11,11 @@ export function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
           <div>
-            <h1 className="text-4xl md:text-7xl mb-6 py-4 bg-linear-to-r from-violet-500 via-purple-300 to-indigo-500 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-7xl mb-6 py-1 bg-linear-to-r from-violet-500 via-purple-300 to-indigo-500 bg-clip-text text-transparent">
               Transformamos ideas en realidad
             </h1>
 
-            <p className="text-xl text-gray-400 mb-10">
+            <p className="text-xl text-[#ccccccf3] mb-10">
               Creamos soluciones de software innovadoras que impulsan el futuro
               de tu negocio con tecnología
             </p>

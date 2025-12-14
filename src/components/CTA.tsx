@@ -13,7 +13,7 @@ export function CTA() {
           <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-purple-700/30 rounded-full blur-3xl" />
 
           <div className="relative z-10 text-center">
-            <h2 className="text-5xl md:text-6xl mb-6 bg-linear-to-r from-violet-400 to-purple-500 bg-clip-text text-transparent">
+            <h2 className="text-5xl md:text-6xl mb-6 py-2 bg-linear-to-r from-violet-400 to-purple-500 bg-clip-text text-transparent">
               ¿Listo para Empezar?
             </h2>
             <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">

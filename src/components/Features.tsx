@@ -32,7 +32,7 @@ export function Features() {
     >
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-5xl mb-4 bg-linear-to-r from-violet-400 to-purple-500 bg-clip-text text-transparent">
+          <h2 className="text-5xl mb-4 py-2 bg-linear-to-r from-violet-400 to-purple-500 bg-clip-text text-transparent">
             ¿Por Qué Neotec?
           </h2>
           <p className="text-xl text-gray-400">
